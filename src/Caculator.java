@@ -1,0 +1,19 @@
+public class Caculator {
+    public static int caculate(int a, int b, char o) {
+        switch (o) {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+            if (b != 0) {
+                return a / b;
+            } else
+                throw new RuntimeException("Can not divde by 0");
+            default:
+                throw new RuntimeException("Unsuppoted operation");
+        }
+    }
+}
